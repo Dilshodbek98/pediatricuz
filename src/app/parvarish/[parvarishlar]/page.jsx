@@ -16,8 +16,6 @@ export const generateMetadata = async ({ params = null }) => {
 const Parvarishlar = async ({ params = null }) => {
   const articles = await fetchData(params?.parvarishlar.replace(/-/g, " "));
 
-  console.log(params);
-
   return (
     <div className="category-list">
       <h2 className="title">
