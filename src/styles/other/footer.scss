@@ -1,0 +1,54 @@
+footer {
+  width: 100%;
+  max-width: 1440px;
+  height: 20dvh;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 100px;
+
+  .link {
+    color: white;
+    font-size: 20px;
+  }
+  .socials {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .icons {
+      display: flex;
+      gap: 20px;
+    }
+
+    .social {
+      color: white;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      .icon:hover {
+        color: rgba($color: #4096ff, $alpha: 0.8);
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 20px;
+    flex-direction: column;
+    align-items: normal;
+    justify-content: normal;
+    gap: 20px;
+
+    h2 {
+      font-size: 16px !important;
+    }
+    .socials {
+      .icons {
+        gap: 10px;
+      }
+    }
+  }
+}

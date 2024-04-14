@@ -1,0 +1,75 @@
+.kasalliklar,
+.rivojlanishi,
+.parvarish,
+.vaksinatsiya,
+.bolimlar,
+.onalarga-maslahatlar,
+.ovqatlantirish {
+  width: 100%;
+  height: 100%;
+  .title {
+    margin-bottom: 20px;
+  }
+  .content {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+
+    .card {
+      width: 100%;
+      cursor: pointer;
+
+      .card-title {
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      .img-wrapper {
+        position: relative;
+        height: 200px;
+        overflow: hidden;
+        margin-bottom: 10px;
+
+        img {
+          transition: all ease 0.3s !important;
+          object-fit: cover;
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+
+      .arrow-icon {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .title {
+    font-size: 16px;
+  }
+
+  .card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba($color: gray, $alpha: 0.5);
+
+    .card-title {
+      font-size: 16px !important;
+      font-weight: 500 !important;
+    }
+
+    .img-wrapper {
+      display: none;
+    }
+
+    .arrow-icon {
+      display: block !important;
+      color: rgba($color: gray, $alpha: 0.5);
+    }
+  }
+}
